@@ -1,0 +1,13 @@
+.navbar-light .navbar-brand {
+    color: rgba(0, 0, 0, 0.9);
+    background-color: cornflowerblue;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar-light .navbar-brand:hover {
+    background-color: rgb(100, 223, 196);
+    transition-delay: 300ms;
+    transition-duration: 400ms;
+}
