@@ -1,0 +1,64 @@
+<h1 class="navbar-brand mb-0" style="text-align: center;">Overall Metrics</h1>
+<div class="mdl-grid">
+  <div class="mdl-cell mdl-cell--6-col" style="text-align: center;">
+      <metric class="col-sm-6" [used]="cpu.used" [available]="cpu.
+      available">
+      <title>CPU</title>
+      <description>utilization of CPU cores</description>
+      </metric>  
+    <!-- <metric class="col-sm-6" [used]="cpu.used" [available]="cpu.available" [title]="CPU" [description]="'Utilization of CPU cores' ">
+    </metric> -->
+  </div>
+  <div class="mdl-cell mdl-cell--6-col" style="text-align: center;">
+      <metric class="col-sm-6" [used]="mem.used" [available]="mem.
+      available">
+      <title>Memory</title>
+      <description>utilization of memory in GB</description>
+      </metric>
+    <!-- <metric class="col-sm-6" [used]="mem.used" [available]="mem.available" [title]="Memory" [description]="'Utilization of Memory in GB' ">
+    </metric> -->
+  </div>
+</div>
+<div class="spacer" style="height: 10px;"></div>
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--6-col" style="text-align: center;">
+<nav class="navbar navbar-dark bg-inverse mb-1">
+  <h2 class="navbar-brand mb-0">Cluster 1</h2>
+</nav>
+<table app-nodes class="table table-hover">
+  <tr app-nodes-row *ngFor="let node of cluster1" [node]="node"></tr>
+</table>
+</div>
+<div class="mdl-cell mdl-cell--6-col" style="text-align: center;">
+<nav class="navbar navbar-dark bg-inverse mb-1">
+  <h2 class="navbar-brand mb-0">Cluster 2</h2>
+</nav>
+<table app-nodes class="table table-hover">
+  <tr app-nodes-row *ngFor="let node of cluster2" [node]="node"></tr>
+</table>
+</div>
+</div>
+
+
+<!-- <div class="mdl-grid">
+  <div class="card card-block">
+    <nav class="navbar navbar-dark bg-inverse mb-1">
+      <h1 class="navbar-brand mb-0">Overall Metrics</h1>
+    </nav>
+    <div class="row">
+      <metric class="col-sm-6" [used]="cpu.used" [available]="cpu.available" [title]="CPU" [description]="'Utilization of CPU cores' ">
+      </metric>
+      <metric class="col-sm-6" [used]="mem.used" [available]="mem.available" [title]="Memory" [description]="'Utilization of Memory in GB' ">
+      </metric>
+    <table app-nodes class="table table-hover">
+        <tr app-nodes-row *ngFor="let node of cluster1" [node]="node"></tr>
+        </table>
+        <nav class="navbar navbar-dark bg-inverse mb-1">
+        <h1 class="navbar-brand mb-0">Cluster 2</h1>
+        </nav>
+        <table app-nodes class="table table-hover">
+        <tr app-nodes-row *ngFor="let node of cluster2" [node]="node"></tr>
+        </table>
+  </div>
+</div>
+</div> -->

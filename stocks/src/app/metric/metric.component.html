@@ -1,0 +1,25 @@
+<div class="card card-block">
+  <div class="card-body">
+    <nav class="navbar navbar-dark bg-primary mb-1" [ngClass]="{'bg-danger': isDanger(), 'bg-success': !isDanger()}">
+      <h1 class="navbar-brand md-0"><ng-content select="title"></ng-content></h1>
+    </nav>
+    <h4 class="card-title">{{value}}/{{max}} ({{value/max | percent: '1.0-2'}})</h4>
+    <p class="card-text"><ng-content select="description"></ng-content></p>
+    <ngb-progressbar [value]="value" [max]="max" [type]="isDanger()?'danger' : 'success'"></ngb-progressbar>
+  </div>
+</div>
+
+
+<!-- <div class="container mt-2">
+  <div class="card card-block">
+    <nav class="navbar navbar-dark bg-inverse mb-1">
+      <h1 class="navbar-brand mb-0">Overall Metrics</h1>
+    </nav>
+    <div class="row">
+      <metric class="col-sm-6" [used]="cpu.used" [available]="cpu.available" [title]="'CPU'" [description]="'utilization of CPU cores'">
+      </metric>
+      <metric class="col-sm-6" [used]="mem.used" [available]="mem.available" [title]="'Memory'" [description]="'utilization of memory in GB'">
+      <metric>
+    </div>
+  </div>
+</div> -->
